@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "examples-py"
+version = "0.1.0"
+description = "Python examples"
+authors = ["Glauber Brennon <glauberbrennon@gmail.com>"]
+readme = "README.md"
+packages = [{include = "examples"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
