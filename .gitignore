@@ -1,0 +1,29 @@
+# Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+.venv/
+
+# Poetry files
+.poetry/
+poetry.lock
+
+# Coverage reports
+.coverage
+*.coveragerc
+coverage.xml
+nosetests.xml
+*.coveragerc
+
+# Test cache
+.pytest_cache/
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
