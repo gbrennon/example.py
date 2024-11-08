@@ -11,9 +11,8 @@ class Singleton:
     ) -> 'Singleton':
         if cls.__instance is None:
             cls.__instance = super(Singleton, cls).__new__(cls)
-
             if args:
-                cls.__value = args[0]
+                cls.__instance.__init__(args[0])
         return cls.__instance
 
     def __init__(self, value: Any) -> None:
