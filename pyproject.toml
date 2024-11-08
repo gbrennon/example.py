@@ -4,11 +4,19 @@ version = "0.1.0"
 description = "Python examples"
 authors = ["Glauber Brennon <glauberbrennon@gmail.com>"]
 readme = "README.md"
-packages = [{include = "examples"}]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-cov = "^6.0.0"
+coverage = "^7.6.4"
+
+[tool.pytest.ini_options]
+addopts = ["--cov=examples", "--cov-report=term-missing"]
+testpaths = ["tests"]
 
 [build-system]
 requires = ["poetry-core"]
