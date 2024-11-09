@@ -26,7 +26,6 @@ class Logger:
         instance._logger.addHandler(handler)
 
     def log(self, message: str):
-        if self._logger is not None:
-            self._logger.info(message)
-        else:
+        if not self._logger:
             raise ValueError("Logger is not initialized")
+        self._logger.info(message)
