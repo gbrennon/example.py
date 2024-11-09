@@ -1,30 +1,22 @@
-from typing import Any, Optional
+from typing import Optional
+
+DO_SOMETHING = "Singleton doing something"
 
 class Singleton:
-    __instance: Optional['Singleton'] = None
-    __value: Any
-    __initialized: bool = False
+    _instance: Optional['Singleton'] = None
+    _initialized: bool = False
 
-    def __new__(
-        cls,
-        *args: tuple[Any, ...],
-    ) -> 'Singleton':
-        if cls.__instance is None:
-            cls.__instance = super(Singleton, cls).__new__(cls)
-            if args:
-                cls.__instance.__init__(args[0])
-        return cls.__instance
+    def __new__(cls, *args, **kwargs) -> 'Singleton':
+        # Ensure only one instance of the class is created
+        if cls._instance is None:
+            cls._instance = super(Singleton, cls).__new__(cls)
+        return cls._instance
 
-    def __init__(self, value: Any) -> None:
-        if not self.__initialized:
-            self.__value = value
-            self.__initialized = True
+    def __init__(self,) -> None:
+        # Ensure the class is initialized only once
+        if not self._initialized:
+            self._initialized = True
 
-
-    @property
-    def value(self) -> Any:
-        return self.__value
-
-    @value.setter
-    def value(self, new_value: Any) -> None:
-        self.__value = new_value
+    def do_something(self) -> str:
+        # Do something
+        return DO_SOMETHING
