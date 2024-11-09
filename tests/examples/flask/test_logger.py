@@ -1,5 +1,7 @@
-from src.examples.flask.logger import Logger
+import pytest
+
 from _pytest.logging import LogCaptureFixture
+from src.examples.flask.logger import Logger
 
 class TestLogger:
     logger: Logger
@@ -24,7 +26,7 @@ class TestLogger:
         # Assert
         assert result is True, "Logger instances are not the same"
 
-    def test_lokg(self, caplog: LogCaptureFixture):
+    def test_log_success(self, caplog: LogCaptureFixture):
         # Arrange
         test_message = "Test message"
 
@@ -33,3 +35,11 @@ class TestLogger:
 
         # Assert
         assert test_message in caplog.text
+
+    def test_log_without_initialization(self):
+        # Arrange
+        self.logger._logger = None
+
+        # Act and Assert
+        with pytest.raises(ValueError):
+            self.logger.log("Test message")
