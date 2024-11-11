@@ -11,7 +11,7 @@ def mock_uuid4() -> Generator[MagicMock, None, None]:
     ) as mock_uuid4:
         yield mock_uuid4
 
-class TestuserFactory:
+class TestUserFactory:
     def test_create_returns_user(self, mock_uuid4: MagicMock):
         # Arrange: Create a name for the user
         name = "Test user"
