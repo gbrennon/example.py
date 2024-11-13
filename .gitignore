@@ -30,3 +30,6 @@ Thumbs.db
 
 # pytestdebug.log
 pytestdebug.log
+
+# env files
+.env
