@@ -12,12 +12,20 @@ This project is structured as follows:
 ├── src
 │   ├── examples
 │   │   ├── flask
-│   │   │   ├── app.py
+│   │   │   ├── adapters
+│   │   │   ├──── __init__.py
+│   │   │   ├──── weather_adapter.py
+│   │   │   ├──── weather_api_client_adapter.py
+│   │   │   ├── services
+│   │   │   ├──── __init__.py
+│   │   │   ├──── weather_service.py
 │   │   │   ├── __init__.py
-│   │   │   └── logger.py
+│   │   │   ├── app.py
+│   │   │   ├── logger.py
+│   │   │   ├── user.py
+│   │   │   ├── user_factory.py
 │   │   └── __init__.py
 │   ├── design_patterns
-│   │   ├── adapter.py
 │   │   ├── behavioral
 │   │   │   └── __init__.py
 │   │   ├── creational
@@ -25,7 +33,8 @@ This project is structured as follows:
 │   │   │   └── singleton.py
 │   │   ├── __init__.py
 │   │   └── structural
-│   │       └── __init__.py
+│   │   │   ├── __init__.py
+│   │   │   └── adapter.py
 │   └── __init__.py
 └── tests
     ├── design_patterns
