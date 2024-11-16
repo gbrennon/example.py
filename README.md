@@ -7,46 +7,66 @@ The goal is to help new learners understand the core concepts of design patterns
 
 This project is structured as follows:
 
-
 ```plaintext
-├── src
-│   ├── examples
-│   │   ├── flask
-│   │   │   ├── adapters
-│   │   │   ├──── __init__.py
-│   │   │   ├──── weather_adapter.py
-│   │   │   ├──── weather_api_client_adapter.py
-│   │   │   ├── services
-│   │   │   ├──── __init__.py
-│   │   │   ├──── weather_service.py
-│   │   │   ├── __init__.py
-│   │   │   ├── app.py
-│   │   │   ├── logger.py
-│   │   │   ├── user.py
-│   │   │   ├── user_factory.py
-│   │   └── __init__.py
-│   ├── design_patterns
-│   │   ├── behavioral
-│   │   │   └── __init__.py
-│   │   ├── creational
-│   │   │   ├── __init__.py
-│   │   │   └── singleton.py
-│   │   ├── __init__.py
-│   │   └── structural
-│   │   │   ├── __init__.py
-│   │   │   └── adapter.py
-│   └── __init__.py
-└── tests
+    src
     ├── design_patterns
     │   ├── behavioral
+    │   │   ├── __init__.py
+    │   │   └── strategy.py
+    │   ├── creational
+    │   │   ├── factory_method.py
+    │   │   ├── factory.py
+    │   │   ├── __init__.py
+    │   │   └── singleton.py
+    │   ├── __init__.py
+    │   └── structural
+    │       ├── adapter.py
+    │       └── __init__.py
+    ├── examples
+    │   ├── flask
+    │   │   ├── adapters
+    │   │   │   ├── __init__.py
+    │   │   │   ├── weather_adapter.py
+    │   │   │   └── weather_api_client_adapter.py
+    │   │   ├── app.py
+    │   │   ├── __init__.py
+    │   │   ├── logger.py
+    │   │   ├── services
+    │   │   │   ├── discount_service.py
+    │   │   │   ├── __init__.py
+    │   │   │   └── weather_service.py
+    │   │   ├── strategies
+    │   │   │   ├── discount
+    │   │   │   └── __init__.py
+    │   │   ├── user_factory.py
+    │   │   └── user.py
+    │   └── __init__.py
+    └── __init__.py
+    tests
+    ├── design_patterns
+    │   ├── behavioral
+    │   │   ├── __init__.py
+    │   │   └── test_strategy.py
     │   ├── creational
     │   │   ├── __init__.py
+    │   │   ├── test_factory_method.py
+    │   │   ├── test_factory.py
     │   │   └── test_singleton.py
     │   ├── __init__.py
     │   └── structural
+    │       ├── __init__.py
+    │       └── test_adapter.py
     ├── examples
     │   ├── flask
-    │   │   └── test_logger.py
+    │   │   ├── adapters
+    │   │   │   ├── __init__.py
+    │   │   │   └── test_weather_api_client_adapter.py
+    │   │   ├── strategy
+    │   │   │   ├── discount
+    │   │   │   └── __init__.py
+    │   │   ├── test_logger.py
+    │   │   ├── test_user_factory.py
+    │   │   └── test_user.py
     │   └── __init__.py
     └── __init__.py
 ```
